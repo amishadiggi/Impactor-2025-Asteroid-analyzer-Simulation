@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Impactor-2025 Asteroid Simulator</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+  .info-box {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .info-box h3 {
+    color: #0077cc;
+  }
+
+  .info-box ul {
+    padding-left: 20px;
+  }
+
+  .info-box li {
+    margin-bottom: 8px;
+  }
+
+  .results-box {
+    margin-top: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+  }
+</style>
+
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    #map { height: 500px; width: 100%; margin-top: 10px; }
+    #results { margin-top: 20px; background: #f2f2f2; padding: 10px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🪐 Impactor-2025: Asteroid Impact Simulator</h1>
+
+  <label>Asteroid Diameter (m): <input id="size" type="number" value="50"></label><br>
+  <label>Velocity (km/s): <input id="velocity" type="number" value="16"></label><br>
+  <label>Latitude: <input id="lat" type="number" value="10"></label><br>
+  <label>Longitude: <input id="lng" type="number" value="70"></label><br>
+  <label>Deflection (km/s): <input id="deflect" type="number" value="0"></label><br><br>
+
+  <button id="simulateBtn">Simulate Impact</button>
+
+  <div id="map"></div>
+  <div id="results"></div>
+  <!-- Simulation Results -->
+<div id="results" class="results-box">
+  <h3>🌠 Simulation Results</h3>
+</div>
+
+<!-- Educational Info Panel -->
+<div id="infoPanel" class="info-box">
+  <h3>📘 Learn About Asteroid Impacts</h3>
+  <ul>
+    <li><b>Mass:</b> How heavy the asteroid is, calculated from its size and density.</li>
+    <li><b>Energy:</b> The total energy released during impact, measured in TNT equivalent.</li>
+    <li><b>Crater Diameter:</b> The size of the crater formed after impact.</li>
+    <li><b>Tsunami Risk:</b> If impact happens in or near ocean areas, it may cause large waves.</li>
+    <li><b>Seismic Event:</b> Shockwaves that can cause earthquakes near the impact zone.</li>
+    <li><b>Deflection Strategy:</b> A method used to change asteroid’s path using rockets or gravity.</li>
+  </ul>
+  <p><i>Tip: Try changing “Deflection %” and observe how impact changes!</i></p>
+</div>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
